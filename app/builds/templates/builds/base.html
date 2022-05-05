@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Builds</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css" rel="stylesheet"/>
+	<link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css" rel="stylesheet"/>
+    <link href="{% static 'builds/css/style.css' %}" rel="stylesheet"/>
+	<link rel="icon" type="image/ico" href="{% static 'common_modules/images/favicon.ico' %}" />
+  </head>
+  <body>
+  
+  {% csrf_token %}
+  
+  	<div class="container-fluid">
+			
+		<!-- ============================ Menu header part ================================= -->
+		
+		<div class="row">
+			<div class="col-md-12">
+				<nav class="navbar navbar-default" role="navigation">
+					<div class="navbar-header">
+						<a href="#" onclick="confirm(event, 'All unsaved data will be lost!', null, '{% url 'choose' %}');">
+							<img class="navbar-brand" src="{% static 'builds/images/gllogo_sm.png' %}"/>
+						</a>
+					</div>
+
+						<ul class="nav navbar-nav">
+
+							<li class="dropdown">
+								 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Builds menu<strong class="caret"></strong></a>
+							  	 <ul class="dropdown-menu">
+
+									<li>
+										<a href="{% url 'upload' %}">Upload build</a>
+									</li>
+
+								</ul>
+							</li>
+
+						</ul>
+
+						<ul class="nav navbar-nav navbar-right">
+							<li id='loading_li'><a> <img src="{% static 'builds/images/loading.gif' %}"> Build uploading...</a> </li>
+							<li id='deleting_li'><a> <img src="{% static 'builds/images/loading.gif' %}"> Event deleting...</a> </li>
+							<li id='updating_li'><a> <img src="{% static 'builds/images/loading.gif' %}"> Event updating...</a> </li>
+						</ul>
+
+				</nav>
+			</div>
+		</div>
+
+	{% block content %}{% endblock %}
+
+	</div>
+
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.js"></script>
+  	<script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+  	<script src="{% static 'builds/js/scripts.js' %}"></script>
+  </body>
+</html>

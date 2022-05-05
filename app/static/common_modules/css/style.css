@@ -1,0 +1,10 @@
+
+html {overflow-y: scroll;}
+
+a:focus {outline:none;}  
+
+focus {outline:none;}  
+
+.noresize {
+  resize: none; 
+}

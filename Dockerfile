@@ -1,7 +1,8 @@
-FROM debian:jessie
-MAINTAINER Matt Bentley <mbentley@mbentley.net>
+FROM debian:stretch
+ARG MODULE=am_tools
+MAINTAINER Georgiy Voronov <voron.zvs@gmail.com>
 
-RUN (apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential git python python-dev python-setuptools nginx sqlite3 supervisor)
+RUN (apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y apt-utils curl aptitude python-mysqldb build-essential git python python-dev python-setuptools nginx sqlite3 supervisor)
 RUN (easy_install pip &&\
   pip install uwsgi)
 
@@ -14,6 +15,5 @@ RUN (echo "daemon off;" >> /etc/nginx/nginx.conf &&\
   ln -s /opt/django/django.conf /etc/nginx/sites-enabled/ &&\
   ln -s /opt/django/supervisord.conf /etc/supervisor/conf.d/)
 
-VOLUME ["/opt/django/app"]
 EXPOSE 80
 CMD ["/opt/django/run.sh"]

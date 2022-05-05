@@ -1,0 +1,45 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Result</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'ldb_scaner/css/style.css' %}" rel="stylesheet">
+	<link rel="icon" type="image/ico" href="{% static 'common_modules/images/favicon.ico' %}" />
+  </head>
+  <body>
+
+    <div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="page-header">
+				<h2>
+				<p  class="text-center">Error</p>
+				<p  class="text-center">{{ msg }}</p>
+					<small>
+						<p class="text-center">({{ text }})</p>
+					</small>
+				</h2>
+			</div>
+		</div>
+	</div>
+		
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<a class="btn btn-primary btn-sm" href="{% url 'choose' %}" role="button">Go to main page</a>
+		</div>
+	</div>
+	
+</div>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="{% static 'ldb_scaner/js/scripts.js' %}"></script>
+  </body>
+</html>

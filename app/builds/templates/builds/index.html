@@ -1,0 +1,75 @@
+{% extends "builds/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+	<!-- ______________________ question modal _________________________ -->
+	<div class="modal fade" id="modal-question" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<div class="modal-header bg-primary">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 class="modal-title">Are you sure?</h4>
+				</div>
+
+				<div class="modal-body" id="question_text">
+					Put here a question before show the modal
+				</div>
+
+				<div class="modal-footer">
+					<a type="button" id="question_ok" class="btn btn-primary" href="#" >
+						Ok
+					</a>
+					<a type="button" class="btn btn-default" data-dismiss="modal" href="#" >
+						Cancel
+					</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="center-align marg-top"><h1>Builds</h1></div>
+		</div>
+	
+		<div class="row marg-top-big">
+			{% if versions %}
+			<table class="table" id="events_details">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Version</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% if latest  %}
+					<tr>
+                        <td>
+							<a href="{% url 'builds' %}{{ latest }}">latest</a>
+                        </td>
+                        <td>{{ latest }}</td>
+						<td>
+							<a href="{% url 'delete' latest %}">delete</a>
+						</td>
+                    </tr>
+					{% endif %}
+					{% for version in versions %}
+					<tr>
+                        <td>
+							<a href="{% url 'builds' %}{{ version }}">Asphalt_manager_{{ version }}</a>
+                        </td>
+                        <td>{{ version }}</td>
+						<td><a href="{% url 'delete' version %}">delete</a></td>
+                    </tr>
+					{% endfor %}
+				</tbody>
+			</table>
+			{% else %}
+			<center>No builds</center>
+			{% endif %}
+		</div>
+	</div>
+
+{% endblock %}

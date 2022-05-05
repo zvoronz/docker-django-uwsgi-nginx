@@ -1,0 +1,2 @@
+
+$('img').attr('draggable',"false");

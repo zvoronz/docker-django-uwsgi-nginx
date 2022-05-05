@@ -1,0 +1,51 @@
+.hidden_row{
+	display: none;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+.marg {
+	margin: 15px;
+}
+
+.marg-top {
+	margin-top: 30px;
+}
+
+.marg-top-big {
+	margin-top: 50px;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    background-color: rgb(255, 255, 255);
+}
+
+.container {
+    max-width: none !important;
+    width: 98%;
+}
+
+.card .card-action{
+	padding: 15px !important; 
+	color: red;
+    border-top-width: 0px;
+}
+
+.card .card-content{
+	padding: 15px !important;
+}
+
+img{
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.small-text {
+    font-size: 18px !important;
+}

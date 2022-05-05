@@ -1,0 +1,63 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta charset="utf-8">
+
+    <title>Authorize</title>
+
+    <link href="{% static 'selector/css/style.css' %}" rel="stylesheet">
+	<link rel="icon" type="image/ico" href="{% static 'common_modules/images/favicon.ico' %}" />    
+  </head>
+
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="center-align marg-top"><img src="{% static 'selector/images/amlogo.png' %}" width=400></div>
+		</div>
+	
+		<div class="row marg-top-big">
+
+			<div class="col s4 offset-s4">
+				<form role="form" method="post" action="{% url 'index' %}">
+				{% csrf_token %} 
+
+					<input type="hidden" id="id_redirect" name="redirect" value="{{ request.GET.next }}">
+				
+					<div class="input-field">
+						<label for="id_login">
+							LDAP (email address)
+						</label>
+						<input class="validate" id="id_login" name="login" type="email">
+					</div>
+
+					<div class="input-field">
+						<label for="id_password">
+							Password
+						</label>
+						<input class="validate" id="id_password" name="password" type="password" autocomplete="off">
+					</div>
+
+					<button type="submit" class="center-align marg-top waves-effect waves-light btn green">
+						Enter
+					</button>
+				</form>
+			</div>
+
+		</div>
+	</div>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script src="{% static 'selector/js/scripts.js' %}"></script>  
+
+</body>
+</html>

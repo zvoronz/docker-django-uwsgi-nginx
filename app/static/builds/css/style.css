@@ -1,0 +1,305 @@
+.hidden_row{
+	display: none;
+}
+
+.violet {
+    color:#aa00aa;
+}
+
+.breadcrumb {
+	margin-bottom: 0px;
+	background-color: #ffffff;
+}
+
+.modal.modal-wide .modal-dialog {
+  width: 90%;
+}
+.modal-wide .modal-body {
+  overflow-y: auto;
+  max-height: calc(100vh - 150px);
+}
+
+.modal-medium .modal-dialog {
+  width: 70%;
+}
+
+/* irrelevant styling */
+  body { text-align: center; }
+  body p {
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+#tallModal .modal-body p { margin-bottom: 900px }
+
+.btn, .modal-footer .btn+.btn{
+	margin-bottom: 3px;
+}
+
+.sprite {
+	height: 128px;
+	width: 128px;
+	float: left;
+}
+
+.sprite:hover {
+	filter:drop-shadow(3px 3px 2px #777777);
+	-webkit-filter:drop-shadow(3px 3px 2px #888888);
+}
+
+.sprite-small {
+    transform: scale(0.5, 0.5) translate(-64px, -64px);
+	height: 128px;
+	width: 128px;
+	float: left;
+	margin-bottom: -84px;
+	margin-right: -64px;
+	margin-top: -20px;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+html, body {padding-right: 0 !important;}
+
+.rank, .tier, .fake, .big {
+	font-size: 120%;
+}
+
+.panel-body {
+    padding: 5px !important;
+	padding-bottom: 0px !important;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    text-align: left;
+    padding: 4px !important;
+}
+
+.margin-bottom-10 {
+	margin-bottom: 10px;
+}
+
+hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+a:focus {outline:none;}
+
+.navbar-default .navbar-brand {
+    color: #777;
+}
+
+
+.navbar-brand {
+    height: 50px;
+    padding: 4px 4px;
+}
+
+.with_br {
+	padding-top: 10px;
+}
+
+.last_element
+{
+	margin-bottom: 40px;
+}
+
+.fix_height {
+	height: 44px;
+	vertical-align: middle !important;
+}
+
+.editable-unsaved {
+    font-weight: normal;
+}
+
+#loading_li, #deleting_li, #updating_li {
+	background-color: #ffd3d3;
+	display:none;
+}
+
+.marking-start {
+	background-color: #E0FFE0;
+}
+
+.marking-end {
+	transition: 2s;
+	background-color: #ffffff;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.input-group-addon {
+    min-width: 100px;
+    text-align: left;
+}
+
+.btn.dropdown-toggle.btn-default {
+	margin-bottom: 0px;
+}
+
+.no-top-border {
+	border-top-width: 0px !important;
+}
+
+label.radio-inline {
+	margin: 7px;
+}
+
+a button {
+    margin: 20px auto;
+}
+
+.reward-item>td {
+    border-top: 0px !important;
+}
+
+.center-col {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mt-5 {
+    margin-top: 5px;
+}
+
+.mr-3 {
+    margin-right: 3px;
+}
+
+.mt-3 {
+    margin-top: 3px;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
+.portals {
+    margin-bottom: 5px;
+}
+
+.table-striped>tbody>tr {
+    background-color: #ffffff;
+}
+
+.highlight {
+    border: 1px solid red;
+    font-weight: bold;
+    height: 171px;
+    background-color: blue;
+}
+
+.static-date, .static-date:hover {
+    text-decoration: none !important;
+    color: #337ab7;
+    cursor: unset;
+}
+
+.d-none {
+    display: none;
+}
+
+.badge {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+    display: grid;
+    align-items: center;
+    border-radius: 50%;
+    font-size: x-large;
+    margin: auto;
+    margin-bottom: 3px;
+    padding: 0;
+}
+
+.milestone {
+    background-color: #FFFF0077 !important;
+}
+
+.result-parsed-string {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.twitter-typeahead .tt-query,
+.twitter-typeahead .tt-hint {
+    margin-bottom: 0;
+}
+
+.twitter-typeahead .tt-hint
+{
+    display: none;
+}
+
+.tt-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    list-style: none;
+    font-size: 14px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+    cursor: pointer;
+}
+
+.tt-suggestion {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.428571429;
+    color: #333333;
+    white-space: nowrap;
+}
+
+.tt-suggestion:hover,
+.tt-suggestion:focus {
+    color: #ffffff;
+    text-decoration: none;
+    outline: 0;
+    background-color: #428bca;
+}
+
+.connectedWith {
+    padding: 4px 4px 4px 4px !important;
+    min-height: 20px;
+    list-style-type: none;
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: lightgray;
+    margin-top: 10px;
+}
+
+.connectedWith>li>table>tbody>tr>td {
+    border-top-style: none;
+    padding: 0px 0px 0px 0px !important;
+}
+
+input {
+    margin: auto;
+    margin-top: 20px;
+}

@@ -1,0 +1,53 @@
+{% extends "builds/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+	<!-- ______________________ question modal _________________________ -->
+	<div class="modal fade" id="modal-question" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<div class="modal-header bg-primary">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 class="modal-title">Are you sure?</h4>
+				</div>
+
+				<div class="modal-body" id="question_text">
+					Put here a question before show the modal
+				</div>
+
+				<div class="modal-footer">
+					<a type="button" id="question_ok" class="btn btn-primary" href="#" >
+						Ok
+					</a>
+					<a type="button" class="btn btn-default" data-dismiss="modal" href="#" >
+						Cancel
+					</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="center-align marg-top"><h1>Upload build</h1></div>
+		</div>
+	
+		<div class="row marg-top-big">
+			<form method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+				<!-- <input type="text" name="version"> -->
+				<input type="file" name="file"/>
+				<input type="submit" value="Upload"/>
+			</form>
+
+			{% if uploaded_file_url %}
+			<p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+			{% endif %}
+
+			<p><a href="{% url 'builds' %}">Return to home</a></p>
+		</div>
+	</div>
+
+{% endblock %}
